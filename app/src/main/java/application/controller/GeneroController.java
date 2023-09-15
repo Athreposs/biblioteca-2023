@@ -19,7 +19,7 @@ public class GeneroController{
     @RequestMapping("/list")
     public String list(Model model){
         model.addAttribute("generos", generoRepo.findAll());
-        return "/genero/list"
+        return "/genero/list";
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
@@ -29,6 +29,6 @@ public class GeneroController{
 
         generoRepo.save(genero);
 
-        return "redirect:/genero/list"
+        return "redirect:/genero/list";
     }
 }
