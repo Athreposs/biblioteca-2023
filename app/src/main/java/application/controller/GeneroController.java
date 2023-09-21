@@ -12,12 +12,12 @@ import application.model.GeneroRepository;
 
 @Controller
 @RequestMapping("/genero")
-public class GeneroController{
+public class GeneroController {
     @Autowired
     private GeneroRepository generoRepo;
 
     @RequestMapping("/list")
-    public String list(Model model){
+    public String list(Model model) {
         model.addAttribute("generos", generoRepo.findAll());
         return "/genero/list";
     }
